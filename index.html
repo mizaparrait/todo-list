@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Tareas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="list roundBorder">
+      <div class="date">
+          <div class="dateRight">
+              <div id="dateNumber"></div>
+              <div>
+                  <div id="dateMonth"></div>
+                  <div id="dateYear"></div>
+              </div>
+          </div>
+          <div id="dateText"></div>
+      </div>
+      <form onsubmit="addNewTask(event)" >
+          <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
+          <button type="submit" class="addTaskButton">+</button>
+          <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
+      </form>
+      <div id="tasksContainer"></div>
+  </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
